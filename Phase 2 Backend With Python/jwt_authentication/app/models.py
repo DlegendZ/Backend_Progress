@@ -15,6 +15,8 @@ class User(Base):
 
 class RefreshTokens(Base):
     __tablename__ = "refresh_tokens"
+
+    id = Column(Integer, primary_key=True)
     user_id = Column(Integer, ForeignKey("users.id"))
     token = Column(String, unique=True)
     expires_at = Column(DateTime)
