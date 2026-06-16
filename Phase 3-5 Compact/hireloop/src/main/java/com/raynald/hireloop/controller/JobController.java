@@ -1,6 +1,7 @@
 package com.raynald.hireloop.controller;
 
 import com.raynald.hireloop.dto.CreateJobRequest;
+import lombok.RequiredArgsConstructor;
 import org.apache.coyote.Response;
 import org.springframework.boot.autoconfigure.batch.BatchProperties;
 import org.springframework.http.HttpStatus;
@@ -11,7 +12,10 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/v1/jobs")
+@RequiredArgsConstructor
 public class JobController {
+    private final JobService jobService;
+
 //    @GetMapping
 //    public List<Job> getAllJobs() {
 //        return List.of();
