@@ -32,7 +32,7 @@ public class Job {
     private String location;
 
     @Column(nullable = false)
-    private String status = "Open";
+    private String status;
 
     @CreationTimestamp
     private LocalDateTime createdAt;
